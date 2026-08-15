@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-ivory antialiased;
+  }
+
+  ::selection {
+    @apply bg-saffron/30 text-ivory;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.saffron.DEFAULT");
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  /* Pre-dawn sky: three faint glows over a near-black gradient. */
+  .bg-cinematic {
+    background-image: radial-gradient(
+        ellipse 80% 50% at 50% 120%,
+        rgb(255 153 51 / 8%),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 12% -10%,
+        rgb(31 163 92 / 6%),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 88% -10%,
+        rgb(30 58 138 / 10%),
+        transparent 60%
+      ),
+      linear-gradient(180deg, #05070d 0%, #070a14 60%, #05070d 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  /* Ambient dust particle: fades in, drifts up, fades out. */
+  .animate-particle-drift {
+    animation-name: particle-drift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes particle-drift {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--particle-opacity, 0.3);
+  }
+  90% {
+    opacity: var(--particle-opacity, 0.3);
+  }
+  100% {
+    transform: translateY(-70px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

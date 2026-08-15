@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="grad-REDFORTCEREMONY" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stopColor="#1E293B"/>
+      <stop offset="60%" stopColor="#0B101E"/>
+      <stop offset="100%" stopColor="#030509"/>
+    </radialGradient>
+    <linearGradient id="tint-REDFORTCEREMONY" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FF9933" stopOpacity="0.28"/>
+      <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.08"/>
+      <stop offset="100%" stopColor="#1E3A8A" stopOpacity="0.22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad-REDFORTCEREMONY)"/>
+  <rect width="1200" height="800" fill="url(#tint-REDFORTCEREMONY)"/>
+
+  <!-- Compass Reticles and Astrolabe Grid -->
+  <circle cx="600" cy="400" r="320" fill="none" stroke="#FF9933" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.3"/>
+  <circle cx="600" cy="400" r="240" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="600" cy="400" r="150" fill="none" stroke="#1E3A8A" stroke-width="1.2" opacity="0.25"/>
+
+  <g stroke="rgba(255,255,255,0.12)" stroke-width="1">
+    <line x1="100" y1="400" x2="1100" y2="400"/>
+    <line x1="600" y1="80" x2="600" y2="720"/>
+    <circle cx="600" cy="400" r="6"/>
+  </g>
+
+  
+      <g transform="translate(600, 360)" fill="none" stroke="#FF9933" stroke-width="2" opacity="0.6">
+        <path d="M -160 60 L -160 -10 L -120 -10 L -120 -40 L -80 -40 L -80 -10 L 80 -10 L 80 -40 L 120 -40 L 120 -10 L 160 -10 L 160 60 Z"/>
+        <path d="M -40 60 L -40 10 L 40 10 L 40 60 Z" fill="#FF9933" fill-opacity="0.2"/>
+      </g>
+    
+
+  <!-- Typography & Archival Header -->
+  <g text-anchor="middle">
+    <text x="600" y="240" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="22" fill="#FF9933" letter-spacing="10" font-weight="700">15 AUGUST 1947</text>
+    <text x="600" y="480" font-family="'Fraunces', Georgia, serif" font-size="46" fill="#F4F1E9" letter-spacing="3" font-weight="600">RED FORT CEREMONY</text>
+    <text x="600" y="530" font-family="Georgia, serif" font-size="20" fill="#94A3B8" font-style="italic">First National Flag Hoisting in Delhi</text>
+  </g>
+
+  <!-- Archival Metadata Stamp -->
+  <rect x="40" y="40" width="1120" height="720" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+  <rect x="48" y="48" width="1104" height="704" fill="none" stroke="#FF9933" stroke-width="0.6" opacity="0.4"/>
+  <text x="64" y="740" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#64748B" letter-spacing="2">ARCHIVE RECORD: PHOTO DIVISION GOVT OF INDIA</text>
+  <text x="1136" y="740" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#FF9933" letter-spacing="2">NATIONAL MEMORIAL</text>
+</svg>
